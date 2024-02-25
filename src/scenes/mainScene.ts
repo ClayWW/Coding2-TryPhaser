@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import Phaser from "phaser";
 
 export default class MainScene extends Phaser.Scene {
@@ -36,7 +35,8 @@ export default class MainScene extends Phaser.Scene {
             const bomb = this.bombs.create(x, 16, "bomb");
             bomb.setBounce(1);
             bomb.setCollideWorldBounds(true);
-            bomb.setVelocityY(Phaser.Math.Between(-200, 200), 20);
+            bomb.setVelocityY(Phaser.Math.Between(-200, 200));
+            bomb.setVelocityX(Phaser.Math.Between(-50, 50));
         }
     }
 
